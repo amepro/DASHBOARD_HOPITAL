@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo_HopitalPrincipal.ico" type="image/ico" />
+    
+
+    <title>Hopital Principal</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+
+    <style>
+        footer {
+            background-color: #fff;
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            bottom: 0;
+            position: fixed;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 999;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer i {
+            color: red;
+        }
+
+        footer a {
+            color: #3c97bf;
+            text-decoration: none;
+        }
+
+        .op1 {
+            color: #047761;
+        }
+
+        .op2 {
+            color: #29d9c2;
+        }
+
+        .En {
+            background: #2A3F54;
+            color: #fcfcfc;
+        }
+
+        .btnt, .btnt:hover, .btnt:focus, .btnt:active, .btnt:link {
+            background: #2A3F54;
+            border: #2A3F54;
+            color: white;
+        }
+
+        .btntbr, .btntbr:hover, .btntbr:focus, .btntbr:active, .btntbr:link {
+          background: #009d02;
+          border: #009d02;
+          color: white;
+      }
+
+        .btnt1 {
+            background: #2A3F54;
+            border: #2A3F54;
+            color: white;
+        }
+
+        .vfvf, .vfvf:hover, .vfvf:focus, .vfvf:active, .vfvf:link {
+            background: #2A3F54;
+            border: #2A3F54;
+            color: white;
+        }
+
+        .vfvfvf, .vfvfvf:hover, .vfvfvf:focus, .vfvfvf:active, .vfvfvf:link {
+            background: #2d4e92;
+            border: #2d4e92;
+            color: white;
+        }
+
+        .vfvfvfvf, .vfvfvfvf:hover, .vfvfvfvf:focus, .vfvfvfvf:active, .vfvfvfvf:link {
+            background: #b62c1a;
+            border: #b62c1a;
+            color: white;
+        }
+
+       
+       
+    </style>
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+              <div class="navbar nav_title" style="border: 0;">
+                <a href="index.html" class="site_title"><img src="images/logo_HopitalPrincipal.jpg" alt="" style="height:
+                  4.5rem;"> <span>Hopital Principal</span></a>
+              </div>
+
+                <div class="clearfix"></div>
+                <hr class="sidebar-divider my-0">
+                <!-- menu profile quick info -->
+                <div class="profile clearfix">
+                    <div class="profile_pic">
+                      <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                    </div>
+                    <div class="profile_info">
+                      <span>Bienvenu,</span>
+                      <h2>Mbaye Thiam</h2>
+                    </div>
+                  </div>
+                <!-- /menu profile quick info -->
+
+                <br/>
+
+               <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                <div class="menu_section">
+                  <h3>Tableau de bord</h3>
+                  <ul class="nav side-menu">
+                    <li><a><i class="fa fa-folder"></i> Dossier <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="dossier.html">Liste Dossier</a></li>
+                      </ul>
+                    </li>
+                    <li><a><i class="fa fa-edit"></i> Consultation <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="nouvelle_consultation.html">Nouvelle Consultation</a></li>
+                        <li><a href="liste_consultation.html">Liste Consultation</a></li>
+                      </ul>
+                    </li>
+                    <li><a><i class="fa fa-table"></i>Rendez Vous <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="ajout_rendez_vous.html">Ajouter Rendez Vous</a></li>
+                        <li><a href="rechercher_rendez_vous.html">Rechercher Rendez Vous</a></li>
+                        <li><a href="rendezvous_depasser.html">Rendez Vous Dépassé </a></li>
+                      </ul>
+                    </li>
+                    <li><a><i class="fa fa-folder-open-o"></i> Examen <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="examen.html">Liste Examen Demandé</a></li>
+                        <!-- <li><a href="tables_dynamic.html">Table Dynamic</a></li> -->
+                      </ul>
+                    </li>
+                    <li><a href="statistique.html"><i class="fa fa-line-chart"></i> Statistique <span class="fa fa-chevron-down"></span></a>
+                      <!-- <ul class="nav child_menu">
+                        <li><a href="chartjs.html">Chart JS</a></li>
+                        <li><a href="chartjs2.html">Chart JS2</a></li>
+                      </ul> -->
+                    </li>
+                    <li><a><i class="fa fa-cogs"></i>Paramétrage <span class="fa fa-chevron-down"></span></a>
+                      <!-- <ul class="nav child_menu">
+                        <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
+                        <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                      </ul> -->
+                    </li>
+                  </ul>
+                </div>
+                <!-- <div class="menu_section">
+                  <h3>Live On</h3>
+                  <ul class="nav side-menu">
+                    <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="e_commerce.html">E-commerce</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="project_detail.html">Project Detail</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                      </ul>
+                    </li>
+                    <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                        <li><a href="page_403.html">403 Error</a></li>
+                        <li><a href="page_404.html">404 Error</a></li>
+                        <li><a href="page_500.html">500 Error</a></li>
+                        <li><a href="plain_page.html">Plain Page</a></li>
+                        <li><a href="login.html">Login Page</a></li>
+                        <li><a href="pricing_tables.html">Pricing Tables</a></li>
+                      </ul>
+                    </li>
+                    <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
+                      <ul class="nav child_menu">
+                          <li><a href="#level1_1">Level One</a>
+                          <li><a>Level One<span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                              <li class="sub_menu"><a href="level2.html">Level Two</a>
+                              </li>
+                              <li><a href="#level2_1">Level Two</a>
+                              </li>
+                              <li><a href="#level2_2">Level Two</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><a href="#level1_2">Level One</a>
+                          </li>
+                      </ul>
+                    </li>                  
+                    <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
+                  </ul>
+                </div> -->
+  
+              </div>
+              <!-- /sidebar menu -->
+
+                <!-- /menu footer buttons -->
+           
+            <!-- /menu footer buttons -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="">
+                            <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <img src="images/img.jpg" alt="">Mbaye Thiam
+                                <span class=" fa fa-angle-down"></span>
+                              </a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                                  
+                                <li><a href="connexion"><i class="fa fa-sign-out pull-right"></i> Déconnexion</a></li>
+                            </ul>
+                        </li>
+
+                       
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                
+
+
+                <div class="clearfix"></div>
+                <!-- <a href="" data-toggle="modal" data-target="#AjouterDossier" class="btn btn-dark btntbr"><strong>Nouveau Dossier
+                        </strong> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a> -->
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title btntbr">
+                                <h2><strong>Rendez Vous Dépasser</strong></h2>
+                                <ul class="nav navbar-right panel_toolbox ">
+                                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                  </li>
+                                  <li>
+                                      <a class="close-link"><i class="fa fa-close"></i></a>
+                                  </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                              </div>
+                            <div class="x_content">
+          
+                              <table class="table table-striped table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th class="btntbr">First Name</th>
+                                    <th class="btntbr">Last Name</th>
+                                    <th class="btntbr">Username</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>                                  
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                                  <tr>                                 
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                  </tr>
+                                  <tr>                                  
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+          
+                            </div>
+                          </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <!-- /page content -->
+        <br/>
+        <br/>
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                © Copyright 2019 <a href="https://openumeric.com/"><strong class="op1">OPEN</strong><strong class="op2">UMERIC</strong></a>
+                - All Rights Reserved
+            </div>
+            <div class="clearfix"></div>
+          </footer>
+        <!-- /footer content -->
+    </div>
+</div>
+
+<!-- ajouter Dossier -->
+<div class="modal fade" id="AjouterDossier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header btntbr">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Ajouter Dossier</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Nombre Sujet</label>
+                        <input type="number" class="form-control" placeholder="Entrer le nombre de sujet">
+                    </div>
+                    <div class="form-group">
+                        <label>Utilisateur</label>
+                        <select class="form-control" id="utilisateur">
+                            <option>Ilo</option>
+                            <option>Mareme</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button type="submit" id="valid" class="btn btn-primary btntbr">Sauvegarger</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- fin ajouter Entree -->
+
+
+
+<!--Détail Dossier -->
+<div class="modal fade" id="DetailDossier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header btntbr">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Détail Dossier</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td width="30%"><label>ID</label></td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><label>Nombre de Kg</label></td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><label>Type d'aliment</label></td>
+                            <td width="70%"></td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><label>Entree</label></td>
+                            <td width="70%"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--fin Détail Dossier -->
+
+
+<!-- modification Dossier -->
+<div class="modal fade" id="modifierEntree" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header En">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modification Entrée</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Nombre de sujet</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label>Utlisateur</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+                    <button type="submit" class="btn btn-primary btnt">Sauvegarger</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Fin modification Dossier -->
+
+
+<!-- jQuery -->
+<script src="vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="vendors/nprogress/nprogress.js"></script>
+<!-- iCheck -->
+<script src="vendors/iCheck/icheck.min.js"></script>
+<!-- Datatables -->
+<script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="vendors/jszip/dist/jszip.min.js"></script>
+<script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="build/js/custom.min.js"></script>
+
+<script>
+    $(function () {
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        var table = $('.samaTable').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: "{{ route('entreee.index') }}",
+            columns: [
+                {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+                {data: 'created_at', name: 'created_at'},
+                {data: 'nombre_sujet', name: 'nombre_sujet'},
+                {data: 'action', name: 'action', orderable: false, searchable: false},
+            ]
+        });
+    });
+</script>
+</body>
+</html>
